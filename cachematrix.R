@@ -1,8 +1,17 @@
+##  guide on how to: 
+## You can create a matrix using the following command: 
+## m <- matrix(c(a, b, c, d), nrow= 2, ncol = 2)
+## with a, b, c and d being the numbers of the vector. After that use   
+## m2 <- makeCacheMatrix(m)
+## and then get the inverse using the last function: 
+## cacheSolve(m2)
+## Try using the last function again, and you should receive the message "Getting 
+## cached data", before receiving the inverse matrix. 
 
+## The first function, the makeCacheMatrix function
 ## The function creates a matrix object that can cache its inverse. Using the 
 ## vector example as a guide on how to make the function and the design of the 
 ## function. 
-
 
 makeCacheMatrix <- function(x = matrix()) {
       
@@ -27,7 +36,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-
+## The second function, the cacheSolve function
 ## A function that computes the inverse of a square matrix, and if the value
 ## have already been calculated and the matrix haven't changed, then it will 
 ## retrieve the inverse from cache. The vector example on the course is used as
